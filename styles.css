@@ -1,0 +1,108 @@
+:root {
+    /* --width-components: 500px; */
+    --width-components: 40%;
+    --span-color: #2c8cff;
+    --app-bgColor: lightskyblue;
+    --app-bgColor: #eee;
+    --input-color: #ddd;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/* contains input dice-, text results- and chart section */
+#riskApp {
+    margin-top: 50px;
+    width: 70%;
+    height: 1000px;
+    /* border: 5px solid var(--app-bgColor);
+    border-radius: 5px; */
+    background-color: var(--app-bgColor);
+}
+
+/* -------
+User input
+------- */
+#inputDices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--app-bgColor);
+}
+.dice {
+    width: var(--width-components);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--input-color);
+}
+.radioOption input{ /* Make radio buttons a bit bigger*/
+    width: 20px;
+    height: 20px;
+}
+/* Row with dice images in between the radiobuttons */
+.diceImg {
+    padding: 0.2rem 0;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: var(--width-components);
+    background-color: var(--input-color);
+}
+.diceImg img {
+    width: 10%;
+}
+
+/* ------------
+textual result
+------------ */
+#output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+#output table th{
+    text-align: left;
+}
+#output table{
+    width: var(--width-components);
+    font-size: 25px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+#output p {
+    width: var(--width-components);
+}
+#recommendation {
+    font-weight: bold;
+    font-size: 35px;
+    color: var(--span-color);
+}
+
+/* -------
+Bar Chart
+------- */
+.chartSection {
+    width: 100%; /* height is same as width (specified in js options) */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.canvasContainer {
+    position: relative;
+    width: var(--width-components);
+    height: 400px;
+}
+#myChart {
+    border: 2px solid white;
+    border-radius: 5px;
+}
